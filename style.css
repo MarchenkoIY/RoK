@@ -308,6 +308,22 @@ sup {
     .container {
         width: auto;
     }
+
+    .container > .header > li, .container > .header > li.active {
+        font-size: 14px;
+    }
+
+    .rankHeader > p {
+        font-size: 15px;
+    }
+
+    .rankHeader:not(.R4) > p > span::after {
+        top: 0px;
+    }
+
+    .rankHeader > .rankContainer {
+        grid-template-columns: repeat(2, auto);
+    }
 }
 
 @keyframes RullSkin {

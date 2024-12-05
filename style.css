@@ -169,7 +169,7 @@ sup {
     grid-template-columns: repeat(8, auto);
     gap: 0;
     color: white;
-    background: url(bg_list.png) no-repeat;
+    background: url('bg_list.png') no-repeat;
 }
 
 .totalWeek > p {
@@ -182,22 +182,22 @@ sup {
 }
 
 .totalWeek > p.preftrue, .modalWin > .info > .dynamic > p.preftrue {
-    background: url(gj.svg) center no-repeat;
+    background: url('gj.svg') center no-repeat;
     background-size: contain;
 }
 
 .totalWeek > p.preffalse, .modalWin > .info > .dynamic > p.preffalse {
-    background: url(bc.svg) center no-repeat;
+    background: url('bc.svg') center no-repeat;
     background-size: contain;
 }
 
 .totalWeek > p.trublestrue, .modalWin > .info > .dynamic > p.trubtrue {
-    background: url(bb.svg) center no-repeat;
+    background: url('bb.svg') center no-repeat;
     background-size: contain;
 }
 
 .totalWeek > p.trublesfalse, .modalWin > .info > .dynamic > p.trubfalse {
-    background: url(gc.svg) center no-repeat;
+    background: url('gc.svg') center no-repeat;
     background-size: contain;
 }
 
@@ -215,7 +215,7 @@ sup {
 }
 
 .modalWin > .info {
-    background:  #000 url(header.png) no-repeat 0 3px;
+    background:  #000 url('header.png') no-repeat 0 3px;
     background-size: contain;
     font-size: 24px;
     padding: 30px;

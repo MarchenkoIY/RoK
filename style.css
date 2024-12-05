@@ -1,0 +1,349 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background: url('sources/rok-wallpaper-23.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 1140px;
+    background: rgba(0, 0, 0, 70%);
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+
+.container > .header {
+    display: flex;
+    padding-bottom: 17px;
+    padding-left: 80px;
+    color: white;
+    background: url('/sources/header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 24px;
+}
+
+.container > .header > li {
+    padding-bottom: 16px;
+    padding-top: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.container > .header > .active {
+    background: transparent;
+    box-shadow: 0 0 5px black;
+    font-size: 26px;
+}
+
+.rankHeader > p {
+    background: url(/sources/bg_list.png) no-repeat;
+    background-size: contain;
+    padding: 20px;
+    padding-top: 12px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    padding-right: 50px;
+    position: relative;
+}
+
+.rankHeader > p > span {
+    margin-left: auto;
+    color: rgba(214, 213, 213, 0.795);
+}
+
+.fullList {
+    margin-bottom: 15px;
+}
+
+.rankHeader:not(.R4) > p > span::after {
+    content: '';
+    position: absolute;
+    background: url(/sources/arrow.svg);
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    top: 17px;
+    right: 20px;
+}
+
+.ranksZone > .fullList > p > span::after {
+    transform: rotate(180deg);
+}
+
+.rankHeader > .rankContainer {
+    color: white;
+    text-align: center;
+    height: 0;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 20px;
+}
+
+.R5 > .rankContainer, .R4 > .rankContainer {
+    height: auto;
+    visibility: visible;
+    margin-bottom: 15px;
+}
+
+.R5 > .rankContainer > div {
+    animation: RullSkin 3s infinite steps(360);
+}
+
+.R4 > .rankContainer > div {
+    animation: ComSkin 3s infinite steps(360);
+}
+
+.R3 > .rankContainer > div {
+    box-shadow: 0 0 10px rgb(46, 49, 250) inset;
+}
+
+.R2 > .rankContainer > div {
+    box-shadow: 0 0 10px rgb(14, 252, 65) inset;
+}
+
+.R1 > .rankContainer > div {
+    box-shadow: 0 0 10px rgb(255, 255, 255) inset;
+}
+
+sup {
+    font-size: 10px;
+}
+
+.fullList > .rankContainer {
+    height: auto;
+    visibility: visible;
+}
+
+.rankContainer > div {
+    border-radius: 10px;
+    padding: 10px;
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+.rankContainer > div > p {
+    text-align: left;
+}
+
+.rankContainer > div > p:first-of-type {
+    margin-bottom: 5px;
+}
+
+.playerItem.up {
+    background: url(/sources/up.svg) no-repeat 90% center;
+    background-size: 30px;
+}
+
+.playerItem.down {
+    background: url(/sources/down.svg) no-repeat 90% center;
+    background-size: 30px;
+}
+
+.statData > input {
+    margin: 5px;
+    width: 160px;
+}
+
+.statData > input[type="checkbox"] {
+    width: auto;
+}
+
+.totalWeek {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    gap: 0;
+    color: white;
+    background: url(/sources/bg_list.png) no-repeat;
+}
+
+.totalWeek > p {
+    padding: 10px;
+    box-shadow: 0 0 5px white inset;
+}
+
+.totalWeek > p:nth-of-type(1), .totalWeek > p:nth-of-type(2), .totalWeek > p:nth-of-type(3), .totalWeek > p:nth-of-type(4), .totalWeek > p:nth-of-type(5), .totalWeek > p:nth-of-type(6), .totalWeek > p:nth-of-type(7), .totalWeek > p:nth-of-type(8) {
+    padding: 15px;
+}
+
+.totalWeek > p.preftrue, .modalWin > .info > .dynamic > p.preftrue {
+    background: url(/sources/gj.svg) center no-repeat;
+    background-size: contain;
+}
+
+.totalWeek > p.preffalse, .modalWin > .info > .dynamic > p.preffalse {
+    background: url(/sources/bc.svg) center no-repeat;
+    background-size: contain;
+}
+
+.totalWeek > p.trublestrue, .modalWin > .info > .dynamic > p.trubtrue {
+    background: url(/sources/bb.svg) center no-repeat;
+    background-size: contain;
+}
+
+.totalWeek > p.trublesfalse, .modalWin > .info > .dynamic > p.trubfalse {
+    background: url(/sources/gc.svg) center no-repeat;
+    background-size: contain;
+}
+
+.modalWin {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 80%);
+    color: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalWin > .info {
+    background:  #000 url(/sources/header.png) no-repeat 0 3px;
+    background-size: contain;
+    font-size: 24px;
+    padding: 30px;
+    padding-top: 0;
+}
+
+.modalWin > .info > .name {
+    text-align: center;
+    font-size: 26px;
+}
+
+.modalWin > .info > .dynamic {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 7px;
+}
+
+.modalWin > .info > .dynamic > p {
+    padding: 10px;
+    box-shadow: 0 0 5px white inset;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        width: 960px;
+    }
+
+    .container > .header > li {
+        padding-bottom: 12px;
+        padding-top: 11px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 720px;
+    }
+
+    .container > .header > li {
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+
+    .totalWeek > p:nth-of-type(1), .totalWeek > p:nth-of-type(2), .totalWeek > p:nth-of-type(3), .totalWeek > p:nth-of-type(4), .totalWeek > p:nth-of-type(5), .totalWeek > p:nth-of-type(6), .totalWeek > p:nth-of-type(7), .totalWeek > p:nth-of-type(8) {
+        padding: 11px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .rankHeader > p {
+        padding: 5px 50px 5px 20px;
+    }
+
+    .rankHeader:not(.R4) > p > span::after {
+        top: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 540px;
+    }
+
+    .rankHeader > .rankContainer {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .rankHeader > p {
+        padding: 0 50px 5px 20px;
+    }
+
+    .rankHeader:not(.R4) > p > span::after {
+        top: 4px;
+    }
+
+    .container > .header > li, .container > .header > li.active {
+        font-size: 20px;
+    }
+
+    .totalWeek {
+        overflow: scroll;
+    }
+
+    .totalWeek > p {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        width: auto;
+    }
+}
+
+@keyframes RullSkin {
+    from {
+        box-shadow: 0px 0px 5px rgb(251, 255, 19) inset;
+    }
+    25% {
+        box-shadow: 0px 0px 9px rgb(251, 255, 19) inset;
+    } 
+    50% {
+
+        box-shadow: 0px 0px 15px rgb(251, 255, 19)inset;
+    }
+    75% {
+        box-shadow: 0px 0px 9px rgb(251, 255, 19) inset;
+    }
+    to {
+        box-shadow: 0px 0px 5px rgb(251, 255, 19) inset;
+    }
+}
+
+@keyframes ComSkin {
+    from {
+        box-shadow: 0px 0px 5px rgb(186, 15, 238) inset;
+    }
+    25% {
+        box-shadow: 0px 0px 9px rgb(186, 15, 238) inset;
+    } 
+    50% {
+
+        box-shadow: 0px 0px 15px rgb(186, 15, 238)inset;
+    }
+    75% {
+        box-shadow: 0px 0px 9px rgb(186, 15, 238) inset;
+    }
+    to {
+        box-shadow: 0px 0px 5px rgb(186, 15, 238) inset;
+    }
+}

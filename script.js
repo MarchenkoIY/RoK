@@ -45,7 +45,7 @@ class Ranks {
                 let playerData = playersData.filter(element => element.name == targetModal.dataset.set)[0],
                     legacyData = legacyPlayersData.filter(element => element.name == targetModal.dataset.set)[0];
 
-                if(legacyData.power == undefined) {
+                if(legacyData.power == 'undefined') {
                     legacyData = {name: playerData.name, power: 0, hpoints: 0, prefix: playerData.prefix, trubles: playerData.trubles, tpoints: 0, apoints: 0}
                 }
 

@@ -324,6 +324,11 @@ sup {
     .rankHeader > .rankContainer {
         grid-template-columns: repeat(2, auto);
     }
+
+    .modalWin > .info {
+        font-size: 15px;
+        padding: 10px;
+    }
 }
 
 @keyframes RullSkin {

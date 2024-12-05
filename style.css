@@ -328,6 +328,16 @@ sup {
     .modalWin > .info {
         font-size: 15px;
         padding: 10px;
+        padding-top: 0;
+    }
+
+    .modalWin > .info > .name {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .rankContainer > div {
+        font-size: 11px;
     }
 }
 

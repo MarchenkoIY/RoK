@@ -45,7 +45,12 @@ class Ranks {
                 let playerData = playersData.filter(element => element.name == targetModal.dataset.set)[0],
                     legacyData = legacyPlayersData.filter(element => element.name == targetModal.dataset.set)[0];
 
+                if(!legacyData.power) {
+                    legacyData = {name: playerData.name, power: 0, hpoints: 0, prefix: playerData.prefix, trubles: playerData.trubles, tpoints: 0, apoints: 0}
+                }
+
                 const container = document.getElementsByClassName('container')[0];
+                
                 container.insertAdjacentHTML('afterend', `<div class = "modalWin">
                 <div class = "info">
                 <p class = "name">${playerData.prefix ? '<sup>DE</sup>' : ''}${playerData.name}</p>

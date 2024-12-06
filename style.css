@@ -93,6 +93,7 @@ body {
     grid-template-columns: repeat(4, auto);
     justify-content: center;
     gap: 20px;
+    overflow: hidden;
 }
 
 .R5 > .rankContainer, .R4 > .rankContainer {

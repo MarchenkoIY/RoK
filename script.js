@@ -82,7 +82,7 @@ class Ranks {
 class LastWeek {
     static render = (isLast = playersData) => {
         let playersList = isLast.filter(elem => +elem.rank < 4);
-        let parsedList = playersList.map(elem => `<p>${elem.name}</p>
+        let parsedList = playersList.map(elem => `<p>${elem.prefix ? '<sup>DE</sup>' : ''}${elem.name}</p>
             <p>${elem.power}</p>
             <p>${elem.hpoints === "undefined" ? `0` : elem.hpoints}</p>
             <p>${elem.tpoints === "undefined" ? `0` : elem.tpoints}</p>

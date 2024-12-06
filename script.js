@@ -25,7 +25,15 @@ class Ranks {
         <div class = "rankHeader R${index}">
             <p class = "hRanks">Rank ${index}${index < 5 ? index == 4 ? `<span>${playersData.filter(element => element.rank == index).length}/8</span>` : `<span>${playersData.filter(element => element.rank == index).length}</span>` : ''}</p>
         <div class = "rankContainer">
-            ${playersData.filter(element => element.rank == index).map(element => `<div class = "playerItem${element.progress == '2' ? ' up' : element.progress == '1' ? ' down' : ''}" data-set = "${element.name}">
+            ${playersData.filter(element => element.rank == index).sort((a, b) => {
+                if(+a.power > +b.power) {
+                    return -1;
+                }
+                if(+a.power < +b.power) {
+                    return 1;
+                }
+                return 0;
+            }).map(element => `<div class = "playerItem${element.progress == '2' ? ' up' : element.progress == '1' ? ' down' : ''}" data-set = "${element.name}">
                     <p>${element.prefix ? `<sup>DE</sup>` : ''}${element.name}</p>
                     <p>Power: ${element.power}</p>
             </div>`).join('')}
